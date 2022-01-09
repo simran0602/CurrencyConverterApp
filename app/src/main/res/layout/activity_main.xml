@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#CDC9C3"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/coin"
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                app:lottie_rawRes="@raw/rupeespinning"/>
+
+                <EditText
+                    android:id="@+id/et"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:hint="Enter Amount in INR"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/arrow_down"
+        app:layout_constraintBottom_toTopOf="@id/cardView2"
+        app:layout_constraintStart_toEndOf="@id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        app:tint="@color/black"
+        />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@id/cardView2"
+        app:layout_constraintEnd_toStartOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        app:srcCompat="@drawable/arrow_up"
+        app:tint="@color/black" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#CDC9C3"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/coin2"
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                app:lottie_rawRes="@raw/dollarcoinspining"/>
+
+            <EditText
+                android:id="@+id/et2"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:hint="Enter Amount in USD"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
